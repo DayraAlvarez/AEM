@@ -1,27 +1,73 @@
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
   background-color: var(--background-color);
 }
 
-.cards .cards-card-body {
-  margin: 16px;
-}
-
 .cards .cards-card-image {
-  line-height: 0;
+  text-align: center;
+  padding-top: 24px;
 }
 
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.cards .cards-card-image img {
+  width: auto;
+  max-width: 160px;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
+
+.cards .cards-card-body {
+  margin: 16px 32px 24px;
+  text-align: center;
+}
+
+.cards .cards-card-body h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.cards .cards-card-body p {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.cards .cards-card-body a {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 1px solid #1d4f6e;
+  border-radius: 999px;
+  color: #1d4f6e;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cards .cards-card-body:nth-of-type(1) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards .cards-card-body:nth-of-type(1) p {
+  flex: 1;
+}
+
+.cards .cards-card-body a:hover {
+  background-color: #1d4f6e;
+  color: white;
+}
+
